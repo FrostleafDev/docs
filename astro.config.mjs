@@ -20,7 +20,7 @@ export default defineConfig({
 				Sidebar: './src/components/Sidebar.astro',
 			},
 			lastUpdated: true,
-			editUrl: {
+			editConfig: {
 				baseUrl: 'https://github.com/derjozelot/docs/edit/master/src/content/docs/',
 			},
 			// credits: true,
