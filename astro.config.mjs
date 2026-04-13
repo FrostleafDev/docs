@@ -5,6 +5,7 @@ import starlightSidebarTopics from 'starlight-sidebar-topics';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://docs.jozelot.de',
 	integrations: [
 		starlight({
 			title: 'Jozelot Docs',
