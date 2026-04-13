@@ -1,0 +1,40 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/Footer.astro';
+---
+
+<footer class="custom-footer">
+    <div class="footer-content">
+        <p>
+            Copyright © 2026 Jozelot and contributors. Built with
+            <a href="https://starlight.astro.build/">Starlight</a>.
+        </p>
+        <p class="disclaimer">
+            This website is not an official Minecraft website and is not associated with Mojang Studios or Microsoft.
+            All product and company names are trademarks or registered trademarks of their respective holders.
+        </p>
+    </div>
+</footer>
+
+<style>
+    .custom-footer {
+        padding: 3rem 1.5rem;
+        border-top: 1px solid var(--sl-color-hairline);
+        text-align: center;
+        font-size: var(--sl-text-xs);
+        color: var(--sl-color-gray-3);
+    }
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .disclaimer {
+        margin-top: 1rem;
+        opacity: 0.7;
+        line-height: 1.5;
+    }
+    a {
+        color: var(--sl-color-text-accent);
+        text-decoration: none;
+    }
+</style>

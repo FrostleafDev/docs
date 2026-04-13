@@ -1,40 +1,40 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: Welcome
+description: Documentation over all projects by jozelot_ and Frostleaf
 template: splash # Remove or comment out this line to display the site sidebar on this page.
+editUrl: false
+lastUpdated: false
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  title: Jozelot Docs
+  tagline: Documentation over all projects by jozelot_ and Frostleaf
   image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+    file: "https://cdn.jozelot.de/assets/images/favicons/logo_white_without_text.png"
+    alt: Jozelot Logo
+#  actions:
+#    - text: Example Guide
+#      link: /guides/example/
+#      icon: right-arrow
+#    - text: Read the Starlight docs
+#      link: https://starlight.astro.build
+#      icon: external
+#      variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid} from '@astrojs/starlight/components';
+import LinkCard from "/src/components/LinkCard.astro";
 
-## Next steps
-
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+<CardGrid>
+  <LinkCard title="JManhunt" href="/jmanhunt" icon="/src/assets/icons/sword.svg" >
+    High Performance Manhunt Engine for Minecraft. For Players and Developers.
+  </LinkCard>
+  <LinkCard title="VaroX" href="/varox" icon="/src/assets/icons/sword.svg" >
+     A simple, Varo like plugin for PaperMC 1.8.9 to 1.21.10. Varo stands for Vanilla Roleplay and is from a german youtuber pvp project.
+  </LinkCard>
 </CardGrid>
+
+import Contributors from '../../components/Contributors.astro';
+
+## Contributors
+Big thanks to our helpers and developers!
+
+<Contributors />
