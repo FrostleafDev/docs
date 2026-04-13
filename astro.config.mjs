@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightSidebarTopics from 'starlight-sidebar-topics';
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,7 +16,9 @@ export default defineConfig({
 			customCss: ['./src/styles/custom.css'],
 			components: {
 				Footer: './src/components/CustomFooter.astro',
+				Sidebar: './src/components/Sidebar.astro',
 			},
+			lastUpdated: true,
 			// credits: true,
 			head: [
 				{
@@ -42,18 +45,32 @@ export default defineConfig({
 				},
 			],
 			social: [{ icon: 'external', label: 'Website', href: 'https://jozelot.de' }, { icon: 'github', label: 'GitHub', href: 'https://github.com/derjozelot' }, { icon: 'seti:json', label: 'code', href: 'https://jd.jozelot.de' }, { icon: 'discord', label: 'Discord', href: 'https://jozelot.de/discord' }],
-			sidebar: [
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
+			plugins: [
+				starlightSidebarTopics([
+					{
+						id: 'jmanhunt',
+						label: 'JManhunt',
+						link: '/jmanhunt',
+						icon: 'seti:json',
+						items: [
+							{ label: 'Übersicht', slug: 'jmanhunt' },
+							{
+								label: 'Erste Schritte',
+								items: [
+									{ label: 'Installation', slug: 'jmanhunt/setup' },
+									{ label: 'Konfiguration', slug: 'jmanhunt/setup' },
+								],
+							},
+							{
+								label: 'Guides',
+								items: [
+									{ label: 'Befehle', slug: 'jmanhunt/setup' },
+									{ label: 'Berechtigungen', slug: 'jmanhunt/setup' },
+								],
+							},
+						],
+					},
+				]),
 			],
 		}),
 	],

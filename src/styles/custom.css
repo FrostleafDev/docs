@@ -1,23 +1,19 @@
 :root {
-    /* Hintergrundfarben */
     --sl-color-bg: #111111 !important;
     --sl-color-bg-nav: #181A1B !important;
 
-    /* Linienfarbe */
     --sl-color-hairline: #25282a !important;
 
-    /* Box-Inhalte auf Hintergrundfarbe setzen */
     --sl-color-bg-inline-code: #181A1B !important;
     --sl-color-card-bg: #111111 !important;
+    --sl-content-max-width: 80rem;
 }
 
-/* Den Header sauber definieren und doppelte Linien verhindern */
 header.header {
     background-color: #181A1B !important;
     border-bottom: 1px solid var(--sl-color-hairline) !important;
 }
 
-/* Das hier entfernt die oft automatisch generierte zweite Linie unter dem Header */
 .page {
     background-color: var(--sl-color-bg) !important;
 }
@@ -27,64 +23,54 @@ header + hr,
     display: none !important;
 }
 
-/* Sidebar-Anpassung */
 .sidebar-pane {
     background-color: #181A1B !important;
     border-inline-end: 1px solid var(--sl-color-hairline) !important;
 }
 
-/* 1. Hero-Bereich: Etwas tiefer als vorhin, aber näher an den Boxen */
 .hero {
-    padding-block-start: 4rem !important; /* "bisschen tiefer" als die 2rem von vorhin */
-    padding-block-end: 1rem !important;   /* Zieht die Boxen näher ans Logo/Text heran */
+    padding-block-start: 4rem !important;
+    padding-block-end: 1rem !important;
     min-height: auto !important;
 }
 
 .card {
-    background-color: var(--sl-color-bg) !important; /* Nutzt #111111 */
-    border: 1px solid var(--sl-color-hairline) !important; /* Dezenter Rahmen */
-    box-shadow: none !important; /* Entfernt eventuelle Schatten für flachen Look */
+    background-color: var(--sl-color-bg) !important;
+    border: 1px solid var(--sl-color-hairline) !important;
+    box-shadow: none !important;
 }
 
-/* Falls die Karten im Grid noch einen Hover-Effekt oder Hintergrund haben */
 .card:hover {
     background-color: var(--sl-color-bg) !important;
 }
 
-/* Starlight Cards haben einen Header-Bereich für das Icon */
 .card .title {
     display: flex !important;
-    align-items: center !important; /* Zentriert Icon und Titel-Text vertikal */
-    gap: 0.75rem !important;        /* Abstand zwischen Icon und Text */
+    align-items: center !important;
+    gap: 0.75rem !important;
 }
 
-/* Stellt sicher, dass das Icon selbst nicht verschoben wird */
 .card svg {
     margin: 0 !important;
 }
 
-/* 3. Boxen näher ans Logo (CardGrid Abstand verringern) */
 .card-grid {
-    margin-block-start: 1rem !important; /* Verringert den Abstand zwischen Hero und den Boxen */
+    margin-block-start: 1rem !important;
 }
 
-/* Logo und Titel-Bereich oben links */
 .header .site-title {
     display: flex !important;
     align-items: center !important;
-    gap: 0.5rem !important; /* Abstand zwischen Logo und Text */
+    gap: 0.5rem !important;
     text-decoration: none !important;
 }
 
 .header img {
-    /* Skaliert das Logo sauber */
     height: 2.2rem !important;
     width: auto !important;
-    /* Falls du doch das quadratische Logo behältst, macht das hier es rund: */
     border-radius: 4px !important;
 }
 
-/* Den Text "Jozelot Docs" neben dem Logo stylen */
 .site-title span {
     font-weight: 700 !important;
     font-size: 1.15rem !important;
@@ -92,9 +78,19 @@ header + hr,
     letter-spacing: -0.01em !important;
 }
 
-/* Verhindert, dass das Logo mobil zu groß wird */
 @media (max-width: 50rem) {
     .header img {
         height: 1.8rem !important;
+    }
+}
+
+@media (min-width: 72rem) {
+    .right-sidebar {
+        width: 20rem;
+        inset-inline-end: 0;
+    }
+
+    .main-pane {
+        padding-inline-end: 4rem;
     }
 }

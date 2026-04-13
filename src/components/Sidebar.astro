@@ -1,0 +1,29 @@
+---
+import Default from '@astrojs/starlight/components/Sidebar.astro';
+import TopicsDropdown from 'starlight-sidebar-topics-dropdown/TopicsDropdown.astro';
+---
+
+<div class="custom-sidebar">
+  <TopicsDropdown />
+</div>
+<Default><slot /></Default>
+
+<style is:global>
+  /* 1. Das Standard-Icon (die Rakete) komplett unsichtbar machen */
+  .starlight-topics-icon svg {
+    display: none !important;
+  }
+
+  /* 2. Dein Schwert-Icon per CSS einfügen */
+  .starlight-topics-item[data-topic-id="jmanhunt"] .starlight-topics-icon,
+  .starlight-topics-dropdown-trigger[data-topic-id="jmanhunt"] .starlight-topics-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: url('/icons/sword.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(0) invert(1);
+    display: block !important;
+  }
+</style>

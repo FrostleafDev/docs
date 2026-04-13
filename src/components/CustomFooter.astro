@@ -3,11 +3,12 @@ import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/Footer.astro';
 ---
 
+<Default {...Astro.props} />
+
 <footer class="custom-footer">
     <div class="footer-content">
         <p>
-            Copyright © 2026 Jozelot and contributors. Built with
-            <a href="https://starlight.astro.build/">Starlight</a>.
+            Copyright © 2026 jozelot_
         </p>
         <p class="disclaimer">
             This website is not an official Minecraft website and is not associated with Mojang Studios or Microsoft.
@@ -18,8 +19,9 @@ import Default from '@astrojs/starlight/components/Footer.astro';
 
 <style>
     .custom-footer {
-        padding: 3rem 1.5rem;
-        border-top: 1px solid var(--sl-color-hairline);
+        padding: 2rem 1.5rem;
+        /* Den Rand oben entfernen, da Default oft schon einen hat */
+        border-top: 1px dashed var(--sl-color-hairline);
         text-align: center;
         font-size: var(--sl-text-xs);
         color: var(--sl-color-gray-3);
@@ -29,12 +31,8 @@ import Default from '@astrojs/starlight/components/Footer.astro';
         margin: 0 auto;
     }
     .disclaimer {
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         opacity: 0.7;
         line-height: 1.5;
-    }
-    a {
-        color: var(--sl-color-text-accent);
-        text-decoration: none;
     }
 </style>
