@@ -94,3 +94,13 @@ header + hr,
         padding-inline-end: 4rem;
     }
 }
+
+site-search button {
+    background-color: #111111 !important;
+    border: 1px solid var(--sl-color-hairline) !important;
+}
+
+div#starlight__search {
+    --pagefind-ui-background: #111111 !important;
+    --pagefind-ui-border: var(--sl-color-hairline) !important;
+}
