@@ -47,7 +47,7 @@ This command builds a production-ready deployment into the `dist/` directory. Th
 to be hosted on any static content server.
 
 ## ❤️ Support the Project
-JManhunt is a passion project developed in our free time. If you want to support the development:
+If you want to support the development:
 
 * **Contribute:** Help us by reporting bugs or submitting pull requests.
 * **Community:** Join our [Discord](https://jozelot.de/discord) and share your feedback.
