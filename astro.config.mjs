@@ -20,7 +20,6 @@ export default defineConfig({
 				Sidebar: './src/components/Sidebar.astro',
 			},
 			lastUpdated: true,
-			editUrl: 'https://github.com/derjozelot/docs/edit/master/src/content/docs/',
 			// credits: true,
 			head: [
 				{
@@ -60,19 +59,14 @@ export default defineConfig({
 								label: 'Erste Schritte',
 								items: [
 									{ label: 'Installation', slug: 'jmanhunt/setup' },
-									{ label: 'Konfiguration', slug: 'jmanhunt/setup' },
-								],
-							},
-							{
-								label: 'Guides',
-								items: [
-									{ label: 'Befehle', slug: 'jmanhunt/setup' },
-									{ label: 'Berechtigungen', slug: 'jmanhunt/setup' },
+									{ label: 'Konfiguration', slug: 'jmanhunt/config' },
 								],
 							},
 						],
 					},
-				]),
+				], {
+					editUrl: 'https://github.com/frostleafdev/docs/edit/master/src/content/docs/'
+				}),
 			],
 		}),
 	],
