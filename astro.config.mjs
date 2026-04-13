@@ -53,20 +53,26 @@ export default defineConfig({
 						label: 'JManhunt',
 						link: '/jmanhunt',
 						icon: 'seti:json',
+						editUrl: 'https://github.com/frostleafdev/docs/edit/master/src/content/docs/',
 						items: [
 							{ label: 'Übersicht', slug: 'jmanhunt' },
 							{
 								label: 'Erste Schritte',
 								items: [
 									{ label: 'Installation', slug: 'jmanhunt/setup' },
-									{ label: 'Konfiguration', slug: 'jmanhunt/config' },
+									{ label: 'Konfiguration', slug: 'jmanhunt/setup' },
+								],
+							},
+							{
+								label: 'Guides',
+								items: [
+									{ label: 'Befehle', slug: 'jmanhunt/setup' },
+									{ label: 'Berechtigungen', slug: 'jmanhunt/setup' },
 								],
 							},
 						],
 					},
-				], {
-					editUrl: 'https://github.com/frostleafdev/docs/edit/master/src/content/docs/'
-				}),
+				]),
 			],
 		}),
 	],
