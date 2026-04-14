@@ -5,6 +5,8 @@ editUrl: true
 lastUpdated: true
 ---
 
+import { Steps } from '@astrojs/starlight/components';
+
 ### Requirements
 
 :::note
@@ -14,12 +16,31 @@ JManhunt requires at least **Java 21** to run.
 :::
 
 We only support the **latest** version of the plugin. New features and bug fixes are not backported to older versions.
-
-### Download
-
 JManhunt is compatible with **Paper/Minecraft 1.21.x** and newer.
 
-You can download the latest release from the following platforms:
+### Installation Steps
 
-* [Modrinth](https://modrinth.com/plugin/jmanhunt)
-* [GitHub Releases](https://github.com/FrostleafDev/jmanhunt/releases)
+<Steps>
+
+1.  **Download**
+
+    Download the latest release from your preferred platform:
+    * [Modrinth](https://modrinth.com/plugin/jmanhunt)
+    * [GitHub Releases](https://github.com/FrostleafDev/jmanhunt/releases)
+
+2.  **Move**
+
+    Move the downloaded `JManhunt-x.y.z.jar` file into the `plugins` folder of your PaperMC server directory.
+
+3.  **Restart**
+
+    Restart your server to enable JManhunt and generate the default configuration.
+
+4.  **Verify**
+
+    Type `/plugins` in the server console. If JManhunt appears in **green**, the installation was successful.
+
+</Steps>
+
+### First Start
+When you run the plugin for the first time, a new folder `plugins/JManhunt/` will be created. This folder contains all the configuration and data files for the plugin.
