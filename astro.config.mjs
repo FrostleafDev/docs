@@ -18,61 +18,67 @@ export default defineConfig({
 			components: {
 				Footer: './src/components/CustomFooter.astro',
 				Sidebar: './src/components/Sidebar.astro',
+				SocialIcons: './src/components/SocialIcons.astro',
 			},
 			lastUpdated: true,
 			// credits: true,
-			head: [
-				{
-					tag: 'link',
-					attrs: {
-						rel: 'preconnect',
-						href: 'https://fonts.googleapis.com',
-					},
-				},
-				{
-					tag: 'link',
-					attrs: {
-						rel: 'preconnect',
-						href: 'https://fonts.gstatic.com',
-						crossorigin: true,
-					},
-				},
-				{
-					tag: 'link',
-					attrs: {
-						rel: 'stylesheet',
-						href: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap',
-					},
-				},
+			social: [
+				// JManhunt Icons
+				{ icon: 'github', label: 'jmanhunt:GitHub', href: 'https://github.com/frostleafdev/jmanhunt' },
+				{ icon: 'seti:java', label: 'jmanhunt:Javadoc', href: 'https://jd.jozelot.de/jmanhunt-api' },
+
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/derjozelot' },
+				{ icon: 'seti:java', label: 'Javadoc', href: 'https://jd.jozelot.de' },
+				{ icon: 'external', label: 'Website', href: 'https://jozelot.de' },
+				{ icon: 'discord', label: 'Discord', href: 'https://jozelot.de/discord' },
+
 			],
-			social: [{ icon: 'external', label: 'Website', href: 'https://jozelot.de' }, { icon: 'github', label: 'GitHub', href: 'https://github.com/derjozelot' }, { icon: 'seti:json', label: 'code', href: 'https://jd.jozelot.de' }, { icon: 'discord', label: 'Discord', href: 'https://jozelot.de/discord' }],
 			plugins: [
 				starlightSidebarTopics([
+						{
+							id: 'jmanhunt',
+							label: 'JManhunt',
+							link: '/jmanhunt',
+							icon: 'seti:json',
+							editUrl: 'https://github.com/frostleafdev/docs/edit/master/src/content/docs/',
+							items: [
+								{
+									label: 'Administration',
+									items: [
+										{
+											label: 'Installation',
+											slug: 'jmanhunt/installation'
+										},
+										{
+											label: 'Setup',
+											slug: 'jmanhunt/setup' },
+									],
+								},
+								{
+									label: 'Developement',
+									items: [
+										{ label: 'Getting started',
+											items: [
+												{
+													label: 'Project setup',
+													slug: 'jmanhunt/dev/getting-started/project-setup'
+												}
+											]
+										},
+									],
+								},
+							],
+						},
+					],
 					{
-						id: 'jmanhunt',
-						label: 'JManhunt',
-						link: '/jmanhunt',
-						icon: 'seti:json',
-						editUrl: 'https://github.com/frostleafdev/docs/edit/master/src/content/docs/',
-						items: [
-							{ label: 'Übersicht', slug: 'jmanhunt' },
-							{
-								label: 'Erste Schritte',
-								items: [
-									{ label: 'Installation', slug: 'jmanhunt/setup' },
-									{ label: 'Konfiguration', slug: 'jmanhunt/setup' },
-								],
-							},
-							{
-								label: 'Guides',
-								items: [
-									{ label: 'Befehle', slug: 'jmanhunt/setup' },
-									{ label: 'Berechtigungen', slug: 'jmanhunt/setup' },
-								],
-							},
-						],
-					},
-				]),
+						topics: {
+							jmanhunt: [
+								'/jmanhunt/admin',
+								'/jmanhunt/dev'
+							]
+						}
+					}
+				),
 			],
 		}),
 	],
