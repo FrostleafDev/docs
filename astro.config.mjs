@@ -55,7 +55,7 @@ export default defineConfig({
 										},
 										{
 											label: 'PlaceholderAPI',
-											slug: 'jmanhunt/placeholderapi'
+											slug: 'jmanhunt/placeholder-api'
 										},
 										{
 											label: 'Permissions',
