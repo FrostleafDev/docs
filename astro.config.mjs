@@ -51,7 +51,33 @@ export default defineConfig({
 										},
 										{
 											label: 'Setup',
-											slug: 'jmanhunt/setup' },
+											slug: 'jmanhunt/setup'
+										},
+										{
+											label: 'Reset',
+											slug: 'jmanhunt/setup'
+										},
+										{
+											label: 'Command',
+											items: [
+												{
+													label: 'Management',
+													slug: 'jmanhunt/setup'
+												},
+												{
+													label: 'Runner and Hunter setup',
+													slug: 'jmanhunt/setup'
+												},
+												{
+													label: 'Spectators',
+													slug: 'jmanhunt/setup'
+												},
+												{
+													label: 'UI and Help',
+													slug: 'jmanhunt/setup'
+												},
+											]
+										},
 									],
 								},
 								{
