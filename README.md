@@ -1,5 +1,7 @@
 # docs [![Discord](https://img.shields.io/discord/844095367704477756.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://jozelot.de/discord) ![License](https://img.shields.io/github/license/FrostleafDev/docs)
 
+The docs page is highly insperated by the [PaperMC docs page](https://docs.papermc.io)
+
 This is the repository for the official documentation of Jozelot's projects.
 Content is published to [docs.jozelot.de](https://docs.jozelot.de).<br>
 You can look into our code and-or modify it by forking it.
