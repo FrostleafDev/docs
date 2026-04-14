@@ -54,27 +54,35 @@ export default defineConfig({
 											slug: 'jmanhunt/setup'
 										},
 										{
+											label: 'PlaceholderAPI',
+											slug: 'jmanhunt/placeholderapi'
+										},
+										{
+											label: 'Permissions',
+											slug: 'jmanhunt/permissions'
+										},
+										{
 											label: 'Reset',
-											slug: 'jmanhunt/setup'
+											slug: 'jmanhunt/reset'
 										},
 										{
 											label: 'Command',
 											items: [
 												{
 													label: 'Management',
-													slug: 'jmanhunt/setup'
+													slug: 'jmanhunt/command/management'
 												},
 												{
 													label: 'Runner and Hunter setup',
-													slug: 'jmanhunt/setup'
+													slug: 'jmanhunt/command/runner-hunter-setup'
 												},
 												{
 													label: 'Spectators',
-													slug: 'jmanhunt/setup'
+													slug: 'jmanhunt/command/spectators'
 												},
 												{
 													label: 'UI and Help',
-													slug: 'jmanhunt/setup'
+													slug: 'jmanhunt/command/ui-help'
 												},
 											]
 										},
@@ -89,6 +97,22 @@ export default defineConfig({
 													label: 'Project setup',
 													slug: 'jmanhunt/dev/getting-started/project-setup'
 												}
+											]
+										},
+										{ label: 'API',
+											items: [
+												{
+													label: 'Player',
+													slug: 'jmanhunt/setup'
+												},
+												{
+													label: 'GameManager',
+													slug: 'jmanhunt/setup'
+												},
+												{
+													label: 'Events',
+													slug: 'jmanhunt/setup'
+												},
 											]
 										},
 									],

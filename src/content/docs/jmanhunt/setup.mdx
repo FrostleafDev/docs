@@ -1,43 +1,77 @@
 ---
-title: Installation & Setup
-description: So richtest du JManhunt ein.
+title: Configuration
+description: Detailed guide on how to configure JManhunt.
+editUrl: true
+lastUpdated: true
 ---
 
-import { Steps } from '@astrojs/starlight/components';
-import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-Das folgende ist kompletter AI zeugs, ich brauche demo daten
+The `config.yml` file is located in the `plugins/JManhunt/` folder. Most changes can be applied instantly using the reload command, though some system settings require a server restart.
+```bash
+/jmanhunt reload
+```
 
-Willkommen beim Setup. Folge diesen Schritten, um das Projekt zu starten.
+## System Settings
 
-<Aside type="caution">
-  Stelle sicher, dass du mindestens **Node.js** v18 installiert hast, bevor du beginnst.
-</Aside>
+These options handle the technical foundation of the plugin.
 
-## Installationsschritte
+* **`locale`**: Defines the plugin language. If you created a custom file in the `locales/` folder (e.g., `fr.yml`), enter `fr` here.
+* **`storage`**: Choose between `SQLITE` (local file, no setup needed) or `MYSQL` (external database for networks).
+* **`check-for-updates`**: We recommend keeping this `true` to receive notifications about important bug fixes.
 
-<Steps>
+## Game Mechanics
 
-1.  **Repository klonen**
-    Lade dir den Quellcode herunter:
-    ```bash
-    git clone [https://github.com/dein-nutzer/jmanhunt.git](https://github.com/dein-nutzer/jmanhunt.git)
-    ```
+Customize the win conditions and how the game handles deaths and pauses.
 
-2.  **Abhängigkeiten installieren**
-    Gehe in den Ordner und installiere die Pakete:
-    ```bash
-    npm install
-    ```
+---
 
-3.  **Entwicklungsserver starten**
-    Starte das Projekt lokal:
-    ```bash
-    npm run dev
-    ```
+<Tabs>
+  <TabItem label="Goals">
+    * **`runner-goal`**: Set to `KILL` (standard Ender Dragon hunt) or `TIME` (survival challenge).
+    * **`runner-goal-kill`**: Define the target entity (e.g., `WITHER`, `ENDER_DRAGON`). Use official [Spigot EntityType](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html) names.
+  </TabItem>
+  <TabItem label="Lives & Conditions">
+    * **`runner-life-type`**:
+        * `INDIVIDUAL`: Every runner has their own set of lives.
+        * `SHARED`: All runners share one global pool of lives.
+    * **`game-end-condition`**: Decide if the game ends when the *first* runner is out or only after *all* runners are eliminated.
+  </TabItem>
+  <TabItem label="Pause & Freeze">
+    * **`pause-freeze-game`**: When active, the entire world (AI, weather, time) freezes during a pause. This ensures absolute fairness if a player needs a break.
+  </TabItem>
+</Tabs>
 
-</Steps>
+---
 
-## Nächste Schritte
+## Visuals & Chat
 
-Sobald alles läuft, kannst du die **API** Konfiguration vornehmen.
+JManhunt includes built-in features to style your server without needing extra plugins for Tablists or Chat formatting.
+You can define unique headers and footers for **Runners**, **Hunters**, and **Spectators**.
+
+:::tip
+All available placeholders are explained by the option.
+:::
+
+### MiniMessage Support
+The plugin fully supports the [MiniMessage](https://docs.papermc.io/adventure/minimessage/format/) format. You can use modern gradients, hover effects, and click events in your chat and tablist strings.
+
+You can use the [MiniMessage Viewer](https://webui.advntr.dev) for a easier writing process.
+
+### PlaceholderAPI and Permissions
+You can find the full list of all permissions and PlaceholderAPI integrations in the documentation!
+
+---
+
+<CardGrid>
+  <LinkCard
+    title="PlaceholderAPI"
+    description="List of all placeholders and further information"
+    href="/jmanhunt/placeholder-api"
+  />
+  <LinkCard
+    title="Permissions"
+    description="List of all permission and further information"
+    href="/jmanhunt/permissions"
+  />
+</CardGrid>
