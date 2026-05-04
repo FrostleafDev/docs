@@ -16,9 +16,10 @@ export default defineConfig({
 			favicon: '/favicon.png',
 			customCss: ['./src/styles/custom.css'],
 			components: {
-				Footer: './src/components/CustomFooter.astro',
-				Sidebar: './src/components/Sidebar.astro',
-				SocialIcons: './src/components/SocialIcons.astro',
+				Footer: './src/components/overrides/CustomFooter.astro',
+				Sidebar: './src/components/overrides/Sidebar.astro',
+				SocialIcons: './src/components/overrides/SocialIcons.astro',
+				LastUpdated: "./src/components/overrides/LastUpdated.astro",
 			},
 			lastUpdated: true,
 			// credits: true,

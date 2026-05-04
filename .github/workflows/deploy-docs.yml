@@ -25,6 +25,8 @@ jobs:
 
       - name: Build Starlight
         run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Copy Build via SSH
         uses: appleboy/scp-action@v0.1.7
