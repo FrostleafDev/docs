@@ -20,6 +20,7 @@ export default defineConfig({
 				Sidebar: './src/components/overrides/Sidebar.astro',
 				SocialIcons: './src/components/overrides/SocialIcons.astro',
 				LastUpdated: "./src/components/overrides/LastUpdated.astro",
+				Head: './src/components/overrides/CustomHead.astro',
 			},
 			lastUpdated: true,
 			// credits: true,
