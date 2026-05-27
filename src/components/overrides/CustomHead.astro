@@ -1,0 +1,19 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/Head.astro';
+
+const html = await Astro.slots.render('default');
+---
+<Default {...Astro.props} />
+
+<script is:inline>
+  document.addEventListener('astro:page-load', () => {
+    if (document.title.includes(' | ')) {
+      document.title = document.title.replace(' | ', ' - ');
+    }
+  });
+
+  if (document.title.includes(' | ')) {
+    document.title = document.title.replace(' | ', ' - ');
+  }
+</script>
